@@ -1,0 +1,38 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fff0f5;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    font-style: italic;
+    margin-top: 5px;
+}
