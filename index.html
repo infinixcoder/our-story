@@ -17,7 +17,29 @@
 
         <div id="memoryContainer" class="gallery"></div>
     </div>
+    <div class="heart-container" id="heartContainer"></div>
+    
+    <script>
+        const heartContainer = document.getElementById('heartContainer');
+        const emojis = ['💖', '💕', '💗', '💘'];
 
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.className = 'heart';
+            heart.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = 3 + Math.random() * 3 + 's';
+            heartContainer.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 6000);
+        }
+
+        setInterval(createHeart, 500);
+    </script>
+    <audio autoplay loop controls style="margin-top: 20px;">
+        <source src="music/song.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
     <script src="script.js"></script>
 </body>
 
